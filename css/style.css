@@ -1,0 +1,90 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+
+  /******************************************
+/* LAYOUT
+/*******************************************/
+#board {
+
+  margin:0 auto;
+  width:700px;
+  text-align: center;
+  padding:0;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.square {
+  width:150px;
+  height:150px;
+}
+
+.row1, .row2, .row3 {
+  display:flex;
+  justify-content: center;
+}
+
+.row1 .column1, .row2 .column1 {
+  border-right: 5px solid black;
+  border-bottom:5px solid black;
+}
+
+.row1 .column3, .row2 .column3 {
+  border-left:5px solid black;
+  border-bottom:5px solid black;
+}
+
+.row2 .column2, .row1 .column2{
+  border-bottom:5px solid black;
+}
+
+.row3 .column1 {
+  border-right:5px solid black;
+}
+
+.row3 .column3 {
+  border-left: 5px solid black;;
+}
+
+
+@media  screen and (max-width:800px) {
+  #board {
+    width:400px;
+  }
+
+  h1{
+    margin-bottom:20px;
+  }
+}
+
+
+
+.noClick {
+  pointer-events:none;
+}
+
+h4 {
+  text-align:center;
+  font-size: 30px;
+}
+
+div {
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.winner {
+  color:red;
+}
