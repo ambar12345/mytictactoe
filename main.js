@@ -78,10 +78,10 @@ class Board {
     }
     winner(){
      console.log('we have a winner')
-     document.querySelector('h4').innerText = `${this._user} WINS!`
+     document.querySelector('h1').innerText = `${this._user} WINS!`
      document.querySelector('body').classList.add('winner')
-     document.querySelector('body').classList.add('noClick')
- 
+     document.querySelector('#board').classList.add('noClick')
+     document.querySelector('button').classList.add('display')
     }
  }
  
@@ -94,10 +94,12 @@ class Board {
      click.checkMove()
   }
  
- 
+ playAgain = () => {
+    window.location.reload();
+ }
  
  document.getElementById('board').addEventListener('click',clickedBoardyo)
- 
+ document.querySelector('button').addEventListener('click',playAgain)
  
  // document.getElementById('board').addEventListener('click',check)
  // document.querySelector('h4').addEventListener('click', reset)

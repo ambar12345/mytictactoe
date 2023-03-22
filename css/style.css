@@ -11,22 +11,22 @@
 /* LAYOUT
 /*******************************************/
 #board {
-
   margin:0 auto;
-  width:700px;
+  width:900px;
   text-align: center;
   padding:0;
 
 }
 
 h1 {
+    font-size: 30px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .square {
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
 }
 
 .row1, .row2, .row3 {
@@ -56,19 +56,6 @@ h1 {
   border-left: 5px solid black;;
 }
 
-
-@media  screen and (max-width:800px) {
-  #board {
-    width:400px;
-  }
-
-  h1{
-    margin-bottom:20px;
-  }
-}
-
-
-
 .noClick {
   pointer-events:none;
 }
@@ -87,4 +74,58 @@ div {
 
 .winner {
   color:red;
+}
+
+button  {
+  display: none;
+  color: orangered;
+  }
+
+.display {
+  display:block;
+  margin:0 auto;
+}
+
+@media  screen and (max-width:800px) {
+  #board {
+    width:400px;
+  }
+
+  h1{
+    margin-bottom:20px;
+  }
+}
+
+@media screen and (max-width:420px) {
+
+  #board {
+    margin-top:30%;
+  }
+
+  .square {
+    width:150px;
+    height:150px;
+  }
+}
+
+@media screen and (max-height:600px){
+  .square {
+    width:150px;
+    height:150px;
+  }
+}
+
+
+@media screen and (max-height:420px){
+  .square {
+    width:100px;
+    height:100px;
+  }
+}
+
+@media screen and (max-height:300px){
+  .square {
+    width:60px;
+    height:60px;
+  }
 }
